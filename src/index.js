@@ -16,6 +16,21 @@ const SQL_TRAIL = 'SELECT * FROM fn_get_incoming_transfer_trail($1)';
 
 app.use(express.json());
 
+// Root endpoint with API information
+app.get('/', (req, res) => {
+  res.json({
+    name: 'Audit Trail API',
+    version: '1.0.0',
+    description: 'API for tracking financial transactions and generating audit trails',
+    endpoints: {
+      '/': 'API information (you are here)',
+      '/health': 'Check API and database health',
+      '/audit/:userId': 'Get audit trail for a specific user'
+    },
+    documentation: 'https://github.com/craigouma/Audit-Trail-API#api-endpoints'
+  });
+});
+
 // Health check endpoint
 app.get('/health', async (req, res) => {
   try {
