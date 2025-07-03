@@ -12,6 +12,15 @@ curl https://audit-trail-api.onrender.com/health
 
 # Get audit trail for user 1
 curl https://audit-trail-api.onrender.com/audit/1
+
+# Get audit trail for user 2
+curl https://audit-trail-api.onrender.com/audit/2
+
+# Get audit trail for user 3
+curl https://audit-trail-api.onrender.com/audit/3
+
+# Get audit trail for user 4
+curl https://audit-trail-api.onrender.com/audit/4
 ```
 
 ## Features
