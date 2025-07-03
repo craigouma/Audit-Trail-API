@@ -13,7 +13,8 @@
     "db:update": "node src/db-update.js",
     "lint": "eslint src/",
     "format": "prettier --write .",
-    "postinstall": "npm run db:update"
+    "postinstall": "npm run db:update",
+    "keep-alive": "node src/keep-alive.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

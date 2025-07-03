@@ -8,4 +8,14 @@ services:
       - key: DATABASE_URL
         sync: false
       - key: PORT
-        value: 10000 
+        value: 10000
+
+  - type: web
+    name: audit-trail-api-keepalive
+    env: node
+    buildCommand: npm install
+    startCommand: node src/keep-alive.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+    plan: free # Explicitly set to free plan since this is just a keep-alive service 
