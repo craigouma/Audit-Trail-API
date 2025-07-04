@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const PING_INTERVAL = 14 * 60 * 1000; // 14 minutes in milliseconds
+const PING_INTERVAL = 3 * 60 * 1000; // 14 minutes in milliseconds
 const SERVICE_URL = 'https://audit-trail-api.onrender.com/health';
 
 function pingService() {
